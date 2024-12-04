@@ -35,6 +35,13 @@ while(userChoice !== even && userChoice !== odd) {
      userChoice = (prompt(`Scegli "Pari" oppure "Dispari" scrivendolo qui! ⬇`)).toUpperCase()
 }
 
+if (userChoice === even) {
+    alert("🟩 Hai scelto PARI! 🟩")
+} else if (userChoice === odd) {
+    alert("🟥 Hai scelto DISPARI! 🟥")
+}
+
 console.log(`L'utente ha scelto: ${userChoice}`)
 
+// 2.
 
