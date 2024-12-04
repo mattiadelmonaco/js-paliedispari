@@ -9,7 +9,7 @@
 // STEPS:
 
 // 1. L'utente sceglie pari o dispari (prompt dove inserire "pari" o "dispari")
-//    - Creare variabili con "pari" = true e "dispari" = false
+//    - Creare variabili con "pari" e "dispari"
 //    - SE la parola inserita è diversa dalla parola "pari" o "dispari" 
 //      alert per avvisare dell'errore e torna alla scelta iniziale
 // 2. L'utente inserisce un numero tra 1 e 5 (prompt con inserimento numero 1 >= 5)
@@ -21,4 +21,20 @@
 // 6. Alert per indicare se ha vinto l'utente oppure il computer
 
 // CODE: 
+
+alert(`Stai per giocare a 🟩 "Pari o dispari" 🟥 contro il computer!`)
+
+// 1. 
+let userChoice = (prompt(`Scegli "Pari" oppure "Dispari" scrivendolo qui! ⬇`)).toUpperCase()
+
+const even = "PARI"
+const odd = "DISPARI"
+
+while(userChoice !== even && userChoice !== odd) {
+     alert(`🔥 Hai inserito "${userChoice}" il quale non è valido. Riprova scrivendo "PARI" oppure "DISPARI" 🔥`)
+     userChoice = (prompt(`Scegli "Pari" oppure "Dispari" scrivendolo qui! ⬇`)).toUpperCase()
+}
+
+console.log(`L'utente ha scelto: ${userChoice}`)
+
 
