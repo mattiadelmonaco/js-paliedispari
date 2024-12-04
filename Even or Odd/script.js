@@ -17,7 +17,7 @@
 //      alert per avvisare dell'errore e torna alla scelta iniziale
 // 3. Creare funzione per generare un numero tra 1 e 5 per il computer
 // 4. Somma dei due numeri (numero scelto utente + nome funzione)
-// 5. Creare funzione per stabilire se il risultato è pari (true) o dispari (false)
+// 5. Creare funzione per stabilire se il risultato è pari o dispari
 // 6. Alert per indicare se ha vinto l'utente oppure il computer
 
 // CODE: 
@@ -72,3 +72,33 @@ console.log(`Il numero estratto per il computer è: ${computerNumber}`)
 const sumNumbers = userNumber + computerNumber
 console.log(`La somma dei due numeri è: ${sumNumbers}`)
 
+// 5. 
+// Funzione per stabilire se numero pari o dispari
+
+function evenOrOdd(Number) {
+    if (Number % 2 === 0 ) {
+        return "Il numero è pari"
+    } else {
+        return "Il numero è dispari"
+    }
+}
+
+// 5.5.
+// alert e console.log per scrivere se la somma dei numeri è pari o dispari
+
+alert(evenOrOdd(sumNumbers))
+
+console.log(evenOrOdd(sumNumbers))
+
+// 6.
+
+if (userChoice === even && sumNumbers % 2 === 0) {
+    alert("🏆 Complimenti, hai vinto! 🏆")
+    console.log("🏆 Complimenti, hai vinto! 🏆")
+} else if (userChoice === odd && sumNumbers % 2 !== 0) {
+    alert("🏆 Complimenti, hai vinto! 🏆")
+    console.log("🏆 Complimenti, hai vinto! 🏆")
+}else {
+    alert("💩 Spiacente, hai perso! 💩")
+    console.log("💩 Spiacente, hai perso! 💩")
+}
