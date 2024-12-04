@@ -6,12 +6,12 @@
 // STEPS:
 
 // 1. Inserire prompt per far inserire all'utente una parola
-// 2. Creare e utilizzare una funzione con risultato booleano per capire se è palindroma o no 
-// 3. Creare variabile booleana true o false
+// 1.5 Creare variabile per contenere la parola invertita
+// 2. Creare e utilizzare una funzione per capire se è palindroma o no 
 //    - SE la parola inserita è === a quella parola con reverse (da fare passo passo e non con il metodo ".reverse") è true
-//      - alert con scritto "è palindroma"
+//      - quindi alert con scritto "è palindroma"
 //    - ALTRIMENTI SE la parola inserita è !== a quella parola con reverse è false
-//      - alert con scritto "non è palindroma"
+//      - quindi alert con scritto "non è palindroma"
 
 // CODE:
 
@@ -19,3 +19,12 @@
 const word = prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")
 console.log (word)
 
+// 1.5.
+let reversedWord = ""
+
+// 2. 
+for (i = word.length -1; i >= 0; i--) {
+    reversedWord = reversedWord + word[i]
+}
+
+console.log(reversedWord)
