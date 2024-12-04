@@ -16,7 +16,7 @@
 // CODE:
 
 // 1.
-// (spostato dopo la funzione)
+// (spostato dopo la funzione per avere maggior chiarezza)
 
 // 1.5.
 // (variabile adesso spostata nella funzione)
@@ -40,7 +40,12 @@ function isPalindrome(word) {
     console.log (`La parola invertita è: ${reversedWord}`)
 }
 
-const word = prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")
-console.log (`La parola inserita è: ${word}`)
+let word = (prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")).toLowerCase()
 
+while (Number(word)) {
+    alert("🔥 Hai inserito un numero, riprova scrivendo una parola! 🔥")
+    word = (prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")).toLowerCase()
+}
+
+console.log (`La parola inserita è: ${word}`)
 isPalindrome(word)
