@@ -44,4 +44,11 @@ if (userChoice === even) {
 console.log(`L'utente ha scelto: ${userChoice}`)
 
 // 2.
+let userNumber = parseFloat(prompt("🔢 Scegli un numero compreso tra 1 e 5! ⬇"))
 
+while(isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
+    alert(`🔥 Hai inserito "${userNumber}" il quale non è valido. Riprova inserendo un numero compreso tra 1 e 5! 🔥`)
+    userNumber = parseFloat(prompt("🔢 Scegli un numero compreso tra 1 e 5! ⬇"))
+}
+
+console.log(`L'utente ha scelto: ${userNumber}`)
