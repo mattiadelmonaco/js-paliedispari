@@ -21,12 +21,15 @@
 // 1.5.
 // (variabile adesso spostata nella funzione)
 
-// 2. 
+// - Ciclo per invertire lettere parole -
 
 // for (i = word.length -1; i >= 0; i--) {
 //     reversedWord = reversedWord + word[i]
 // }
 
+
+
+// 2.
 // Funzione per capire se una parola è palindroma oppure no
 function isPalindrome(word) {
     let reversedWord = ""
@@ -40,12 +43,15 @@ function isPalindrome(word) {
     console.log (`La parola invertita è: ${reversedWord}`)
 }
 
+// 1.
 let word = (prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")).toLowerCase()
 
+// Check.
 while (Number(word)) {
     alert("🔥 Hai inserito un numero, riprova scrivendo una parola! 🔥")
     word = (prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")).toLowerCase()
 }
 
+// console.log per tenere traccia della parola inserita e funzione in uso
 console.log (`La parola inserita è: ${word}`)
 isPalindrome(word)
