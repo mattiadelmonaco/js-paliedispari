@@ -17,14 +17,27 @@
 
 // 1.
 const word = prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")
-console.log (word)
+console.log (`La parola inserita è: ${word}`)
 
 // 1.5.
-let reversedWord = ""
+// (variabile adesso spostata nella funzione)
 
 // 2. 
-for (i = word.length -1; i >= 0; i--) {
-    reversedWord = reversedWord + word[i]
+
+// for (i = word.length -1; i >= 0; i--) {
+//     reversedWord = reversedWord + word[i]
+// }
+
+function isPalindrome(word) {
+    let reversedWord = ""
+    for (i = word.length -1; i >= 0; i--) {
+        reversedWord = reversedWord + word[i]
+    } if (reversedWord === word) {
+        alert(`✔ La parola inserita (${word}) È palindroma! ✔`)
+    } else {
+        alert(`❌ La parola inserita (${word}) NON è palindroma! ❌`)
+    }
+    console.log (`La parola invertita è: ${reversedWord}`)
 }
 
-console.log(reversedWord)
+isPalindrome(word)
