@@ -15,3 +15,7 @@
 
 // CODE:
 
+// 1.
+const word = prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")
+console.log (word)
+
