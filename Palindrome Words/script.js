@@ -16,8 +16,7 @@
 // CODE:
 
 // 1.
-const word = prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")
-console.log (`La parola inserita è: ${word}`)
+// (spostato dopo la funzione)
 
 // 1.5.
 // (variabile adesso spostata nella funzione)
@@ -28,6 +27,7 @@ console.log (`La parola inserita è: ${word}`)
 //     reversedWord = reversedWord + word[i]
 // }
 
+// Funzione per capire se una parola è palindroma oppure no
 function isPalindrome(word) {
     let reversedWord = ""
     for (i = word.length -1; i >= 0; i--) {
@@ -39,5 +39,8 @@ function isPalindrome(word) {
     }
     console.log (`La parola invertita è: ${reversedWord}`)
 }
+
+const word = prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")
+console.log (`La parola inserita è: ${word}`)
 
 isPalindrome(word)
