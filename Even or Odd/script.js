@@ -22,33 +22,48 @@
 
 // CODE: 
 
-alert(`Stai per giocare a 🟩 "Pari o dispari" 🟥 contro il computer!`)
+// alert(`Stai per giocare a 🟩 "Pari o dispari" 🟥 contro il computer!`)
 
-// 1. 
-let userChoice = (prompt(`Scegli "Pari" oppure "Dispari" scrivendolo qui! ⬇`)).toUpperCase()
+// // 1. 
+// let userChoice = (prompt(`Scegli "Pari" oppure "Dispari" scrivendolo qui! ⬇`)).toUpperCase()
 
-const even = "PARI"
-const odd = "DISPARI"
+// const even = "PARI"
+// const odd = "DISPARI"
 
-while(userChoice !== even && userChoice !== odd) {
-     alert(`🔥 Hai inserito "${userChoice}" il quale non è valido. Riprova scrivendo "PARI" oppure "DISPARI" 🔥`)
-     userChoice = (prompt(`Scegli "Pari" oppure "Dispari" scrivendolo qui! ⬇`)).toUpperCase()
+// while(userChoice !== even && userChoice !== odd) {
+//      alert(`🔥 Hai inserito "${userChoice}" il quale non è valido. Riprova scrivendo "PARI" oppure "DISPARI" 🔥`)
+//      userChoice = (prompt(`Scegli "Pari" oppure "Dispari" scrivendolo qui! ⬇`)).toUpperCase()
+// }
+
+// if (userChoice === even) {
+//     alert("🟩 Hai scelto PARI! 🟩")
+// } else if (userChoice === odd) {
+//     alert("🟥 Hai scelto DISPARI! 🟥")
+// }
+
+// console.log(`L'utente ha scelto: ${userChoice}`)
+
+// // 2.
+// let userNumber = parseFloat(prompt("🔢 Scegli un numero compreso tra 1 e 5! ⬇"))
+
+// while(isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
+//     alert(`🔥 Hai inserito "${userNumber}" il quale non è valido. Riprova inserendo un numero compreso tra 1 e 5! 🔥`)
+//     userNumber = parseFloat(prompt("🔢 Scegli un numero compreso tra 1 e 5! ⬇"))
+// }
+
+// alert(`Hai scelto 🔢 ${userNumber} 🔢`)
+
+// console.log(`L'utente ha scelto: ${userNumber}`)
+
+// 3. 
+function getRandomNumber(min, max) {
+let randomNumber = (Math.floor((Math.random()) * (max - min + 1) + min))
+return randomNumber
 }
 
-if (userChoice === even) {
-    alert("🟩 Hai scelto PARI! 🟩")
-} else if (userChoice === odd) {
-    alert("🟥 Hai scelto DISPARI! 🟥")
-}
+const computerNumber = getRandomNumber(1, 5) 
 
-console.log(`L'utente ha scelto: ${userChoice}`)
+alert(`Il numero estratto per il computer è: 🔢 ${computerNumber} 🔢`)
 
-// 2.
-let userNumber = parseFloat(prompt("🔢 Scegli un numero compreso tra 1 e 5! ⬇"))
+console.log(`Il numero estratto per il computer è: ${computerNumber}`)
 
-while(isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
-    alert(`🔥 Hai inserito "${userNumber}" il quale non è valido. Riprova inserendo un numero compreso tra 1 e 5! 🔥`)
-    userNumber = parseFloat(prompt("🔢 Scegli un numero compreso tra 1 e 5! ⬇"))
-}
-
-console.log(`L'utente ha scelto: ${userNumber}`)
