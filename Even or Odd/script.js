@@ -57,6 +57,15 @@ console.log(`L'utente ha scelto: ${userNumber}`)
 
 // 3.
 // Funzione per generare numeri random
+
+/**
+ * Generate a random number between a min and a max
+ * 
+ * @param {number} min - min number
+ * @param {number} max - max number
+ * @returns {number}
+ */
+
 function getRandomNumber(min, max) {
 let randomNumber = (Math.floor((Math.random()) * (max - min + 1) + min))
 return randomNumber
@@ -75,20 +84,31 @@ console.log(`La somma dei due numeri è: ${sumNumbers}`)
 // 5. 
 // Funzione per stabilire se numero pari o dispari
 
+/**
+ * Check if a number is even or odd
+ * 
+ * @param {number} Number - num to check
+ * @returns {boolean}
+ */
+
 function evenOrOdd(Number) {
     if (Number % 2 === 0 ) {
-        return "Il numero è pari"
+        return true
     } else {
-        return "Il numero è dispari"
+        return false
     }
 }
 
 // 5.5.
 // alert e console.log per scrivere se la somma dei numeri è pari o dispari
 
-alert(evenOrOdd(sumNumbers))
-
-console.log(evenOrOdd(sumNumbers))
+if (evenOrOdd(sumNumbers) === true) {
+    alert("🟩 Il numero è pari! 🟩")
+    console.log("Il numero è pari")
+} else if (evenOrOdd(sumNumbers) === false) {
+    alert("🟥 Il numero è dispari! 🟥")
+    console.log("Il numero è dispari")
+}
 
 // 6.
 
