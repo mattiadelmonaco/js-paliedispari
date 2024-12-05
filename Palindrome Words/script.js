@@ -31,16 +31,23 @@
 
 // 2.
 // Funzione per capire se una parola è palindroma oppure no
+
+/**
+ * Check if a word is palindrome
+ * 
+ * @param {string} word - the word to check
+ * @returns {boolean}
+ */
+
 function isPalindrome(word) {
     let reversedWord = ""
     for (i = word.length -1; i >= 0; i--) {
         reversedWord = reversedWord + word[i]
     } if (reversedWord === word) {
-        alert(`✔ La parola inserita (${word}) È palindroma! ✔`)
+        return true
     } else {
-        alert(`❌ La parola inserita (${word}) NON è palindroma! ❌`)
+        return false
     }
-    console.log (`La parola invertita è: ${reversedWord}`)
 }
 
 // 1.
@@ -52,6 +59,17 @@ while (Number(word)) {
     word = (prompt("Vuoi sapere se una parola è palindroma? Inseriscila qui! ⬇")).toLowerCase()
 }
 
-// console.log per tenere traccia della parola inserita e funzione in uso
+// console.log per tenere traccia della parola inserita
 console.log (`La parola inserita è: ${word}`)
-isPalindrome(word)
+
+// Stampa del risultato
+
+const checkIsPalindrome = isPalindrome(word)
+
+if (checkIsPalindrome) {
+    alert(`✔ La parola inserita (${word}) È palindroma! ✔`)
+    console.log(`La parola inserita (${word}) È palindroma!`)
+} else {
+    alert(`❌ La parola inserita (${word}) NON è palindroma! ❌`)
+    console.log(`La parola inserita (${word}) NON è palindroma!`)
+}
